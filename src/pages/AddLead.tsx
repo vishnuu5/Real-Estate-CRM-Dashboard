@@ -62,7 +62,7 @@ const AddLead = () => {
       name: formData.name,
       phone: formData.phone,
       createdAt: new Date().toISOString().split("T")[0],
-      file: fileData, // Store Base64 file
+      file: fileData,
     };
   
     const existingLeads = JSON.parse(localStorage.getItem("leads") || "[]");
