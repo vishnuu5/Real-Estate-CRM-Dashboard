@@ -20,15 +20,15 @@ import {
 import { useNavigate } from "react-router-dom";
 import { Building, Search } from "lucide-react";
 import { useState } from "react";
-import { useProperties } from "../context/PropertiesContext"; // ✅ Import context
+import { useProperties } from "../context/PropertiesContext"; 
 
 const Properties = () => {
   const navigate = useNavigate();
-  const { properties } = useProperties(); // ✅ Get properties from context
+  const { properties } = useProperties();
   const [searchQuery, setSearchQuery] = useState("");
   const [typeFilter, setTypeFilter] = useState<string>("");
 
-  // Filter properties based on search and type
+ 
   const filteredProperties = properties.filter(
     (property) =>
       (property.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -49,7 +49,7 @@ const Properties = () => {
         </Stack>
       </Box>
 
-      {/* Search and Filter Section */}
+      
       <Stack direction={{ xs: "column", sm: "row" }} spacing={2} mb={3}>
         <TextField
           fullWidth
@@ -72,7 +72,7 @@ const Properties = () => {
         </FormControl>
       </Stack>
 
-      {/* Properties Table */}
+      
       <TableContainer component={Paper}>
         <Table>
           <TableHead>
