@@ -30,7 +30,7 @@ The **Lead Management System** is a web-based application that allows users to:
 
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/your-username/lead-management-system.git
+git clone https://github.com/vishnuu5/Real-Estate-CRM-Dashboard
 cd lead-management-system
 ```
 
