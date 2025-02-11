@@ -10,17 +10,17 @@ import {
   Select,
   FormControl,
   InputLabel,
-  SelectChangeEvent, // ✅ Import SelectChangeEvent from MUI
+  SelectChangeEvent,
 } from "@mui/material";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
-import { useProperties } from "@/context/PropertiesContext"; // ✅ Import context
+import { useProperties } from "@/context/PropertiesContext";
 
 const EditProperty = () => {
-  const { id } = useParams(); // Get property ID from URL
-  const { properties, updateProperty } = useProperties(); // ✅ Get context data
+  const { id } = useParams(); 
+  const { properties, updateProperty } = useProperties();
   const navigate = useNavigate();
 
-  // Find the property by ID
+  
   const property = properties.find((p) => p.id === id);
   if (!property) {
     return (
@@ -34,19 +34,19 @@ const EditProperty = () => {
 
   const [formData, setFormData] = useState(property);
 
-  // ✅ Fix: Ensure event target has a `name` property
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  // ✅ Fix: Use `SelectChangeEvent` for MUI Select components
+ 
   const handleSelectChange = (e: SelectChangeEvent) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSave = () => {
-    updateProperty(formData); // ✅ Update the shared state
-    navigate("/properties"); // ✅ Redirect after saving
+    updateProperty(formData);
+    navigate("/properties");
   };
 
   return (
