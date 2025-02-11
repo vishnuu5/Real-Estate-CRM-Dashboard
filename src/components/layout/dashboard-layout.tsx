@@ -1,5 +1,5 @@
 import { ReactNode, useState } from "react";
-import { Sidebar } from "./sidebar"; // Ensure correct import
+import { Sidebar } from "./sidebar";
 import Header from "./header";
 import { Box, CssBaseline } from "@mui/material";
 
