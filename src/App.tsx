@@ -14,10 +14,10 @@ import { PropertiesProvider } from "@/context/PropertiesContext";
 
 const queryClient = new QueryClient();
 
-// Material UI Theme
+
 const theme = createTheme({
   palette: {
-    mode: "light", // Change to "dark" if needed
+    mode: "light", 
     primary: {
       main: "#1976d2",
     },
