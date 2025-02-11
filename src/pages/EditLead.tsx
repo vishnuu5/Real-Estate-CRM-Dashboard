@@ -8,7 +8,7 @@ type Lead = {
   name: string;
   phone: string;
   createdAt: string;
-  file: string | null; // Allow file to be either string or null
+  file: string | null;
 };
 
 const EditLead = () => {
@@ -21,7 +21,7 @@ const EditLead = () => {
     name: "",
     phone: "",
     createdAt: "",
-    file: null, // Initialize as null
+    file: null,
   });
 
   const [filePreview, setFilePreview] = useState<string | null>(null);
@@ -48,7 +48,7 @@ const EditLead = () => {
       reader.onload = () => {
         const base64File = reader.result as string;
         setFilePreview(base64File);
-        setLead({ ...lead, file: base64File }); // Store as Base64
+        setLead({ ...lead, file: base64File });
       };
       reader.readAsDataURL(file);
     }
@@ -87,7 +87,7 @@ const EditLead = () => {
       <Typography variant="body1" sx={{ mt: 2 }}>Upload File:</Typography>
       <input type="file" onChange={handleFileChange} />
 
-      {/* Preview Uploaded File (Only if it's an image) */}
+     
       {filePreview && (
         <Box sx={{ mt: 2 }}>
           <Typography variant="body2">File Preview:</Typography>
