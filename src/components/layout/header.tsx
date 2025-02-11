@@ -1,9 +1,9 @@
 import { AppBar, Toolbar, IconButton, InputBase, Box } from "@mui/material";
 import { Menu, Search, Notifications, AccountCircle } from "@mui/icons-material";
 
-// Define type for props
+
 interface HeaderProps {
-  onMenuClick: () => void; // Function type that doesn't return anything
+  onMenuClick: () => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
