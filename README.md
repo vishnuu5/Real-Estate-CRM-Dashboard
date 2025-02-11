@@ -26,6 +26,12 @@ The **Lead Management System** is a web-based application that allows users to:
 
 ---
 
+## 🚀 Live URL
+```bash
+## 🚀 Live Demo
+[Click live demo](https://real-estate-crm-dashboard-henna.vercel.app)
+```
+
 ## 🔧 Installation & Setup
 
 ### 1️⃣ Clone the Repository
