@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { UserPlus, Edit, Delete } from "lucide-react";
 import { useSnackbar } from "notistack";
 
-// Define type for leads
+
 type Lead = {
   id: string;
   name: string;
@@ -77,18 +77,17 @@ const Leads = () => {
                     <Typography variant="body2" color="textSecondary">{lead.phone}</Typography>
                     <Typography variant="caption" color="textSecondary">Created: {lead.createdAt}</Typography>
                     {lead.file && (
-  <Box mt={2}>
-    <Typography variant="body2">File:</Typography>
-    {lead.file.startsWith("data:image") ? (
-      <img src={lead.file} alt="Uploaded File" width={150} />
-    ) : (
-      <a href={lead.file} download={`Lead-${lead.id}`} target="_blank" rel="noopener noreferrer">
-        Download File
-      </a>
-    )}
-  </Box>
-)}
-
+                      <Box mt={2}>
+                        <Typography variant="body2">File:</Typography>
+                        {lead.file.startsWith("data:image") ? (
+                        <img src={lead.file} alt="Uploaded File" width={150} />
+                        ) : (
+                        <a href={lead.file} download={`Lead-${lead.id}`} target="_blank" rel="noopener noreferrer">
+                           Download File
+                        </a>
+                       )}
+                      </Box>
+                    )}
                     <Box display="flex" justifyContent="space-between" marginTop={2}>
                       <IconButton color="primary" onClick={() => handleEdit(lead.id)}>
                         <Edit />
